@@ -1,0 +1,43 @@
+# Health Solutions
+
+***I Created an app with javascript, css, and html that fetches data from WebMD specifically about how patients can lower high blood pressure. Then I parse the data into easy readable instructions: 
+
+// 1. Create a function that fetches the data from WebMD
+// 2. Create a function that parses the data into easy readable instructions
+// 3. Create a function that displays the data in the browser
+
+// 1. Create a function that fetches the data from WebMD
+
+function fetchData() {
+fetch("https://www.webmd.com/hypertension-high-blood-pressure/guide/high-blood-pressure-lifestyle-changes")
+.then(function(response) {
+return response.text();
+})
+.then(function(data) {
+parseData(data);
+})
+.catch(function(error) {
+console.log(error);
+});
+}
+
+// 2. Create a function that parses the data into easy readable instructions
+
+function parseData(data) {
+const parser = new DOMParser();
+const doc = parser.parseFromString(data, "text/html");
+const title = doc.querySelector("h1").innerText;
+const content = doc.querySelector(".article-content").innerText;
+displayData(title, content);
+}
+
+// 3. Create a function that displays the data in the browser
+
+function displayData(title, content) {
+const titleElement = document.querySelector("#title");
+const contentElement = document.querySelector("#content");
+titleElement.innerText = title;
+contentElement.innerText = content;
+}
+
+fetchData();
