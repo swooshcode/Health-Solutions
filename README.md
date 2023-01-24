@@ -1,5 +1,11 @@
-# TikTok-Bot
-App Bot that fetches data from TikTok based on views and parses it for the user
+# Health Solutions
+
+***I Created an app with javascript, css, and html that fetches data from WebMD specifically about how patients can lower high blood pressure. Then I parse the data into easy readable instructions: 
+
+// 1. Create a function that fetches the data from WebMD
+// 2. Create a function that parses the data into easy readable instructions
+// 3. Create a function that displays the data in the browser
+
 
 Open Software License ("OSL") v. 3.0
 
