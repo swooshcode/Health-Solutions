@@ -1,1 +1,54 @@
+````
+// -> Updates:
+// Create a function that fetches the data from WebMD:
+// Create a function that parses the data into easy readable instructions:
+// Create a function that displays the data in the browser:
+
+````
+// -> Here is a Python function that fetches data from WebMD using the requests library:
+````
+
+Copy code
+import requests
+
+def fetch_webmd_data():
+    url = "https://www.webmd.com/data-url"
+    response = requests.get(url)
+    return response.text
+
+````
+// -> Here is a function that parses the data into easy readable instructions using the BeautifulSoup library:
+````
+
+Copy code
+from bs4 import BeautifulSoup
+
+def parse_webmd_data(data):
+    soup = BeautifulSoup(data, 'html.parser')
+    # Use BeautifulSoup to find and extract the relevant information
+    instructions = soup.find('div', {'class': 'instructions'}).text
+    return instructions
+
+````
+// -> Here is a function that displays the data in the browser using the webbrowser library:
+````
+
+Copy code
+import webbrowser
+
+def display_webmd_data(instructions):
+    html = f"<html><body>{instructions}</body></html>"
+    # Write the HTML to a temporary file
+    with open("temp.html", "w") as f:
+        f.write(html)
+    # Open the temporary file in the default web browser
+    webbrowser.open("temp.html")
+
+````
+// -> may need to adjust the selectors, classes, and methods to match the structure of the web page you are trying to scrape.
+// **All Rights Reserved - see "Readme.md"
+// Licenser: Frame Tech Solutions Ltd., Co. 框架技術解決方案
+// Founder: Nigel Kelly "Huanglong" Phillips
+````
+
 
