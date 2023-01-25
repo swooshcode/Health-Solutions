@@ -6,6 +6,10 @@
 // 2. Create a function that parses the data into easy readable instructions
 // 3. Create a function that displays the data in the browser
 
+````
+Licensor: Frame Tech Solutions Ltd., Co. 框架技術解決方案
+-> Founder: Nigel Kelly "Huanglong" Phillips
+````
 
 Open Software License ("OSL") v. 3.0
 
